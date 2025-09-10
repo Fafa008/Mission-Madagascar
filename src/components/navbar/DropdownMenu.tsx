@@ -39,14 +39,14 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ items }) => {
           {/* Right Section */}
           <div className="w-2/3">
             <p className="text-gray-600 mb-4">
-              Explore what is possible with an industry expert. See their
-              availability and book a time that works for you.
+              Découvrez ce qui est possible avec un expert du secteur. Consultez
+              sa disponibilité et réservez un créneau qui vous convient.
             </p>
             <a
               href="#"
               className="text-[var(--brand-green)] hover:underline block mb-6"
             >
-              Explore all categories →
+              Explorer toutes les catégories →
             </a>
             <div className="grid grid-cols-3 gap-4">
               {items.right.map((card, idx) => (

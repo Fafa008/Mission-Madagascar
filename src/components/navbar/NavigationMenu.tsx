@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { DropdownMenu } from "./DropdownMenu";
 
 export const NavigationMenu: React.FC = () => {
@@ -102,7 +102,11 @@ export const NavigationMenu: React.FC = () => {
       >
         <button className="flex items-center space-x-1 text-gray-700 hover:text-[var(--brand-green)] px-3 py-2 text-sm font-medium transition-colors">
           <span>Freelances</span>
-          <ChevronDown className="w-4 h-4" />
+          {activeDropdown === "freelances" ? (
+            <ChevronDown className="w-4 h-4" />
+          ) : (
+            <ChevronUp className="w-4 h-4" />
+          )}
         </button>
 
         {activeDropdown === "freelances" && (
@@ -118,7 +122,11 @@ export const NavigationMenu: React.FC = () => {
       >
         <button className="flex items-center space-x-1 text-gray-700 hover:text-[var(--brand-green)] px-3 py-2 text-sm font-medium transition-colors">
           <span>Missions</span>
-          <ChevronDown className="w-4 h-4" />
+          {activeDropdown === "missions" ? (
+            <ChevronDown className="w-4 h-4" />
+          ) : (
+            <ChevronUp className="w-4 h-4" />
+          )}
         </button>
 
         {activeDropdown === "missions" && (
